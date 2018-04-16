@@ -7,19 +7,31 @@ A simple https://github.com/sirupsen/logrus log formatter. Includes
 * Log level
 * Caller - "file:line func"
 * Log message
-* Additional fields
+* Additional data
 
-```
-time="2018-04-16T05:14:07.559Z" host="k8s-proxy-688fb8b57d-4rzt4" level="info" caller="proxy.go:252 github.com/mkenney/k8s-proxy/pkg/proxy.(*Proxy).Start" msg="starting kubernetes proxy" port="80"
-```
 
 ## Usage
-text format (above)
+
+#### Text format
+
+Set the formatter:
 ```go
 log.SetFormatter(&logfmt.TextFormat{})
 ```
 
-JSON format
+Produces:
+```js
+time="2018-04-16T05:14:07.559Z" host="k8s-proxy-688fb8b57d-4rzt4" level="info" caller="proxy.go:252 github.com/mkenney/k8s-proxy/pkg/proxy.(*Proxy).Start" msg="starting kubernetes proxy" port="80"
+```
+
+####JSON format
+
+Set the formatter
 ```go
 log.SetFormatter(&logfmt.JSONFormat{})
+```
+
+Produces:
+```json
+{"time":"2018-04-16T06:23:37.133Z","level":"info","host":"k8s-proxy-7b77bfd8bd-7xcvn","caller":"proxy.go:258 github.com/mkenney/k8s-proxy/pkg/proxy.(*Proxy).Start","msg":"starting kubernetes proxy","data":[{"Key":"port","Msg":"80"}]}
 ```
