@@ -24,7 +24,7 @@ Produces:
 time="2018-04-16T05:14:07.559Z" host="k8s-proxy-688fb8b57d-4rzt4" level="info" caller="proxy.go:252 github.com/mkenney/k8s-proxy/pkg/proxy.(*Proxy).Start" msg="starting kubernetes proxy" port="80"
 ```
 
-####JSON format
+#### JSON format
 
 Set the formatter
 ```go
