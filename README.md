@@ -12,6 +12,10 @@ A simple https://github.com/sirupsen/logrus log formatter. Includes
 
 ## Usage
 
+```go
+import logfmt "github.com/mkenney/go-log-fmt"
+```
+
 #### Text format
 
 Set the formatter:
