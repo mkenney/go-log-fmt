@@ -5,10 +5,9 @@ A simple https://github.com/sirupsen/logrus log formatter. Includes
 * [iso 8601](https://en.wikipedia.org/wiki/ISO_8601) formatted date string - `"2006-01-02T15:04:05.000Z07:00"`
 * OS hostname
 * Log level
-* Caller - "file:line func"
 * Log message
-* Additional data
-
+* Additional fields
+* Caller - "file:line func"
 
 ## Usage
 
