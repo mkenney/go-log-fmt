@@ -25,10 +25,16 @@ RFC3339Milli defines an RFC3339 date format with miliseconds
 */
 const RFC3339Milli = "2006-01-02T15:04:05.000Z07:00"
 
+/*
+JSONFormat extends log.JSONFormatter.
+*/
 type JSONFormat struct {
 	*log.JSONFormatter
 }
 
+/*
+TextFormat extends log.TextFormatter.
+*/
 type TextFormat struct {
 	*log.TextFormatter
 }
